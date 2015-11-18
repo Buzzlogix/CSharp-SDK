@@ -1,15 +1,37 @@
 /*
  * BuzzlogixTextAnalysisAPI.PCL
  *
- * This file was automatically generated for Buzzlogix by APIMATIC BETA v2.0 on 11/09/2015
+ * This file was automatically generated for Buzzlogix by APIMATIC BETA v2.0 on 11/18/2015
  */
 using System;
-using Buzzlogix.Controllers;
+using com.buzzlogix.Controllers;
 
-namespace Buzzlogix
+namespace com.buzzlogix
 {
     public partial class BuzzlogixTextAnalysisAPIClient
     {
+
+        /// <summary>
+        /// Singleton access to Twittersentiment controller
+        /// </summary>
+        public TwittersentimentController Twittersentiment
+        {
+            get
+            {
+                return TwittersentimentController.Instance;
+            }
+        }
+
+        /// <summary>
+        /// Singleton access to Keywords controller
+        /// </summary>
+        public KeywordsController Keywords
+        {
+            get
+            {
+                return KeywordsController.Instance;
+            }
+        }
 
         /// <summary>
         /// Singleton access to Objectivity controller
@@ -30,17 +52,6 @@ namespace Buzzlogix
             get
             {
                 return SentimentController.Instance;
-            }
-        }
-
-        /// <summary>
-        /// Singleton access to Twittersentiment controller
-        /// </summary>
-        public TwittersentimentController Twittersentiment
-        {
-            get
-            {
-                return TwittersentimentController.Instance;
             }
         }
 

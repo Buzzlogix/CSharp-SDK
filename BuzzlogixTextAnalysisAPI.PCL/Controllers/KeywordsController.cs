@@ -13,18 +13,18 @@ using System.Threading.Tasks;
 
 namespace com.buzzlogix.Controllers
 {
-    public partial class ObjectivityController: BaseController
+    public partial class KeywordsController: BaseController
     {
         #region Singleton Pattern
 
         //private static variables for the singleton pattern
         private static object syncObject = new object();
-        private static ObjectivityController instance = null;
+        private static KeywordsController instance = null;
 
         /// <summary>
         /// Singleton pattern implementation
         /// </summary>
-        internal static ObjectivityController Instance
+        internal static KeywordsController Instance
         {
             get
             {
@@ -32,7 +32,7 @@ namespace com.buzzlogix.Controllers
                 {
                     if (null == instance)
                     {
-                        instance = new ObjectivityController();
+                        instance = new KeywordsController();
                     }
                 }
                 return instance;
@@ -46,7 +46,7 @@ namespace com.buzzlogix.Controllers
         /// </summary>
         /// <param name="body">Required parameter: Supply text to be classified.</param>
         /// <return>Returns the dynamic response from the API call</return>
-        public async Task<dynamic> CreateReturnEnglishObjectivityAsync(
+        public async Task<dynamic> CreateReturnEnglishKeywordsAsync(
                 string body)
         {
             //the base uri for api requestss
@@ -54,7 +54,7 @@ namespace com.buzzlogix.Controllers
 
             //prepare query string for API call
             StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-            _queryBuilder.Append("/objectivity");
+            _queryBuilder.Append("/keywords");
 
 
             //validate and preprocess url
@@ -103,9 +103,11 @@ namespace com.buzzlogix.Controllers
         /// <summary>
         /// The text should be provided as multipart/form-data with the key 'text'. Files can be uploaded.
         /// </summary>
+        /// <param name="apikey">Required parameter: Supply your API key.</param>
         /// <param name="body">Required parameter: Supply text to be classified.</param>
         /// <return>Returns the dynamic response from the API call</return>
-        public async Task<dynamic> CreateReturnEnglishObjectivityFormAsync(
+        public async Task<dynamic> CreateReturnEnglishKeywordsFormAsync(
+                string apikey,
                 string body)
         {
             //the base uri for api requestss
@@ -113,7 +115,7 @@ namespace com.buzzlogix.Controllers
 
             //prepare query string for API call
             StringBuilder _queryBuilder = new StringBuilder(_baseUri);
-            _queryBuilder.Append("/objectivity/form");
+            _queryBuilder.Append("/keywords/form");
 
 
             //validate and preprocess url
@@ -123,7 +125,8 @@ namespace com.buzzlogix.Controllers
             var _headers = new Dictionary<string,string>()
             {
                 {"user-agent", "APIMATIC 2.0"},
-                {"accept", "application/json"}
+                {"accept", "application/json"},
+                {"apikey", apikey}
             };
             _headers.Add("apikey", Configuration.Apikey);
 

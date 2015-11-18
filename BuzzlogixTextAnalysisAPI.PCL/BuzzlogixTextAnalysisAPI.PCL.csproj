@@ -2,15 +2,15 @@
 <!--
  - BuzzlogixTextAnalysisAPI.PCL
  -
- - This file was automatically generated for Buzzlogix by APIMATIC BETA v2.0 on 11/09/2015
+ - This file was automatically generated for Buzzlogix by APIMATIC BETA v2.0 on 11/18/2015
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <RootNamespace>Buzzlogix</RootNamespace>
+    <RootNamespace>com.buzzlogix</RootNamespace>
     <AssemblyName>BuzzlogixTextAnalysisAPI.PCL</AssemblyName>
     <OutputType>Library</OutputType>
     <OutputPath>bin/DEBUG/</OutputPath>
-    <ProjectGuid>{f02d9191-8d46-4314-b89e-5989c4861783}</ProjectGuid>
+    <ProjectGuid>{25b1ceaa-de84-420e-ab42-e2b30da4cb5f}</ProjectGuid>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <NuGetPackageImportStamp>ee2bb91c</NuGetPackageImportStamp>
@@ -73,12 +73,21 @@
     </Reference>	
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Controllers\TwittersentimentController.cs" />
+     <Compile Include="Controllers\KeywordsController.cs" />
      <Compile Include="Controllers\ObjectivityController.cs" />
      <Compile Include="Controllers\SentimentController.cs" />
-     <Compile Include="Controllers\TwittersentimentController.cs" />
+     <Compile Include="HTTP\Client\IHTTPClient.cs" />
+     <Compile Include="HTTP\Client\UnirestClient.cs" />
+     <Compile Include="HTTP\Client\HttpContext.cs" />
+     <Compile Include="HTTP\Request\HttpRequest.cs" />
+     <Compile Include="HTTP\Request\HttpMethod.cs" />
+     <Compile Include="HTTP\Response\HttpResponse.cs" />
+     <Compile Include="HTTP\Response\HttpStringResponse.cs" />
+     <Compile Include="HTTP\Client\FileStreamInfo.cs" />
+     <Compile Include="Controllers\BaseController.cs" />
      <Compile Include="Configuration.cs" />
     <Compile Include="APIHelper.cs" />
-    <Compile Include="AuthUtility.cs" />
     <Compile Include="APIException.cs" />
     <Compile Include="BuzzlogixTextAnalysisAPIClient.cs" />
     <None Include="packages.config" />
