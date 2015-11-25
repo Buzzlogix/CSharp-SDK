@@ -2,7 +2,7 @@
 <!--
  - BuzzlogixTextAnalysisAPI.PCL
  -
- - This file was automatically generated for Buzzlogix by APIMATIC BETA v2.0 on 11/18/2015
+ - This file was automatically generated for buzzlogix by APIMATIC BETA v2.0 on 11/25/2015
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -10,7 +10,7 @@
     <AssemblyName>BuzzlogixTextAnalysisAPI.PCL</AssemblyName>
     <OutputType>Library</OutputType>
     <OutputPath>bin/DEBUG/</OutputPath>
-    <ProjectGuid>{25b1ceaa-de84-420e-ab42-e2b30da4cb5f}</ProjectGuid>
+    <ProjectGuid>{6d5c732d-ef51-4f4a-b55b-91ab4b40856a}</ProjectGuid>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <NuGetPackageImportStamp>ee2bb91c</NuGetPackageImportStamp>

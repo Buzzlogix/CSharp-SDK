@@ -1,7 +1,7 @@
 /*
  * BuzzlogixTextAnalysisAPI.PCL
  *
- * This file was automatically generated for Buzzlogix by APIMATIC BETA v2.0 on 11/18/2015
+ * This file was automatically generated for buzzlogix by APIMATIC BETA v2.0 on 11/25/2015
  */
 using System;
 using System.Collections.Generic;
@@ -103,11 +103,9 @@ namespace com.buzzlogix.Controllers
         /// <summary>
         /// The text should be provided as multipart/form-data with the key 'text'. Files can be uploaded.
         /// </summary>
-        /// <param name="apikey">Required parameter: Supply your API key.</param>
         /// <param name="body">Required parameter: Supply text to be classified.</param>
         /// <return>Returns the dynamic response from the API call</return>
         public async Task<dynamic> CreateReturnEnglishKeywordsFormAsync(
-                string apikey,
                 string body)
         {
             //the base uri for api requestss
@@ -125,8 +123,7 @@ namespace com.buzzlogix.Controllers
             var _headers = new Dictionary<string,string>()
             {
                 {"user-agent", "APIMATIC 2.0"},
-                {"accept", "application/json"},
-                {"apikey", apikey}
+                {"accept", "application/json"}
             };
             _headers.Add("apikey", Configuration.Apikey);
 
