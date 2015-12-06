@@ -1,7 +1,7 @@
 /*
  * BuzzlogixTextAnalysisAPI.PCL
  *
- * This file was automatically generated for buzzlogix by APIMATIC BETA v2.0 on 11/25/2015
+ * This file was automatically generated for buzzlogix by APIMATIC BETA v2.0 on 12/06/2015
  */
 using System;
 using com.buzzlogix.Controllers;
@@ -58,9 +58,9 @@ namespace com.buzzlogix
         /// <summary>
         /// Client constructor
         /// </summary>
-        public BuzzlogixTextAnalysisAPIClient(string apikey)
+        public BuzzlogixTextAnalysisAPIClient(string xMashapeKey)
         {
-            Configuration.Apikey = apikey;
+            Configuration.XMashapeKey = xMashapeKey;
         }
     }
 }

@@ -9,5 +9,11 @@ namespace com.buzzlogix.Http.Client
     {
         public HttpRequest Request { get; set; }
         public HttpResponse Response { get; set; }
+
+		public HttpContext(HttpRequest request, HttpResponse response)
+        {
+            Request = request;
+            Response = response;
+        }
     }
 }

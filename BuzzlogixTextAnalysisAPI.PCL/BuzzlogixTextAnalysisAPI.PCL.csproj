@@ -2,7 +2,7 @@
 <!--
  - BuzzlogixTextAnalysisAPI.PCL
  -
- - This file was automatically generated for buzzlogix by APIMATIC BETA v2.0 on 11/25/2015
+ - This file was automatically generated for buzzlogix by APIMATIC BETA v2.0 on 12/06/2015
 -->
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -10,7 +10,7 @@
     <AssemblyName>BuzzlogixTextAnalysisAPI.PCL</AssemblyName>
     <OutputType>Library</OutputType>
     <OutputPath>bin/DEBUG/</OutputPath>
-    <ProjectGuid>{6d5c732d-ef51-4f4a-b55b-91ab4b40856a}</ProjectGuid>
+    <ProjectGuid>{41d2c585-ef06-4679-9b36-72dcd59bf6d3}</ProjectGuid>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <NuGetPackageImportStamp>ee2bb91c</NuGetPackageImportStamp>
@@ -90,6 +90,7 @@
     <Compile Include="APIHelper.cs" />
     <Compile Include="APIException.cs" />
     <Compile Include="BuzzlogixTextAnalysisAPIClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -100,7 +101,6 @@
     </PropertyGroup>    
     <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
   </Target>
- <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />  
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
